@@ -30,13 +30,8 @@ body {
 
 .banner {
   font-family: 'TeachableSans-Bold';
+  padding: 0;
   font-size: 40px;
-  @include breakpoint-strict(xs) {
-    padding: 0;
-  }
-  @include breakpoint-strict(sm) {
-    padding: 0;
-  }
   @include breakpoint(lg) {
     font-size: 50px;
   }
@@ -57,14 +52,8 @@ body {
     background-image: asset-url('home-headshot.jpg');
     height: 400px;
     background-position: 50%;
-    @include breakpoint(xs-sm) {
-      background-size: cover;
-      padding: 0;
-    }
-    @include breakpoint(md) {
-      background-size: contain;
-      padding: 0;
-    }
+    background-size: cover;
+    padding: 0;
   }
 
   .full-name {
