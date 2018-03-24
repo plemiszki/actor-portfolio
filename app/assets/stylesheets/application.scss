@@ -15,3 +15,9 @@
 
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
+ @import 'reset';
+ @import 'fonts';
+
+body {
+  font-family: 'TeachableSans-Regular';
+}
