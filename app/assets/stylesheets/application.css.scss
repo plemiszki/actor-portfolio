@@ -18,6 +18,35 @@
  @import 'reset';
  @import 'fonts';
 
+.vertically-align-contents {
+ display: flex;
+ align-items: center;
+}
+
 body {
   font-family: 'TeachableSans-Regular';
+}
+
+.banner {
+  font-family: 'TeachableSans-Bold';
+  font-size: 40px;
+
+  .first-name, .last-name {
+
+    > div {
+      height: 400px;
+
+      div {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .headshot {
+    background-image: asset-url('home-headshot.jpg');
+    height: 400px;
+    background-size: contain;
+    background-position: 50%;
+  }
 }
