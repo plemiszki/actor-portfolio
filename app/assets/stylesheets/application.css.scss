@@ -17,6 +17,7 @@
  @import 'bootstrap';
  @import 'reset';
  @import 'fonts';
+ @import 'mix-ins';
 
 .vertically-align-contents {
  display: flex;
@@ -30,6 +31,15 @@ body {
 .banner {
   font-family: 'TeachableSans-Bold';
   font-size: 40px;
+  @include breakpoint-strict(xs) {
+    padding: 0;
+  }
+  @include breakpoint-strict(sm) {
+    padding: 0;
+  }
+  @include breakpoint(lg) {
+    font-size: 50px;
+  }
 
   .first-name, .last-name {
 
@@ -46,7 +56,20 @@ body {
   .headshot {
     background-image: asset-url('home-headshot.jpg');
     height: 400px;
-    background-size: contain;
     background-position: 50%;
+    @include breakpoint(xs-sm) {
+      background-size: cover;
+      padding: 0;
+    }
+    @include breakpoint(md) {
+      background-size: contain;
+      padding: 0;
+    }
+  }
+
+  .full-name {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 60px;
   }
 }
