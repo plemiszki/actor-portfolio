@@ -63,8 +63,20 @@ body {
   }
 }
 
+hr {
+  margin-bottom: 60px;
+}
+
+.blurb {
+  font-size: 18px;
+
+  p:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
 .resume-download {
-  padding-top: 60px;
+  padding: 60px 0;
   font-family: 'TeachableSans-Bold';
   font-size: 20px;
   text-align: center;
