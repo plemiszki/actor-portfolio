@@ -1,0 +1,53 @@
+.banner {
+  font-family: 'TeachableSans-Bold';
+  padding: 0;
+  font-size: 40px;
+  @include breakpoint(lg) {
+    font-size: 50px;
+  }
+
+  .first-name, .last-name {
+
+    > div {
+      height: 400px;
+
+      div {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .headshot {
+    background-image: asset-url('home-headshot.jpg');
+    height: 400px;
+    background-position: 50%;
+    background-size: cover;
+    padding: 0;
+  }
+
+  .full-name {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 60px;
+  }
+}
+
+hr {
+  margin-bottom: 60px;
+}
+
+.blurb {
+  font-size: 18px;
+
+  p:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.resume-download {
+  padding: 60px 0;
+  font-family: 'TeachableSans-Bold';
+  font-size: 20px;
+  text-align: center;
+}

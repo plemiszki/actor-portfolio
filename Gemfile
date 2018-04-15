@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
+gem 'clearance'
 
 group :development do
   gem 'byebug', platform: :mri

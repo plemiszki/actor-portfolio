@@ -1,0 +1,48 @@
+#clearance {
+
+  margin: auto;
+  margin-top: 30px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'TeachableSans-SemiBold';
+
+  #content {
+    font-size: 14px;
+
+    #flash-message {
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    .text-field, .password-field {
+      display: block;
+      width: 80%;
+      margin: auto;
+      text-align: left;
+
+      input {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .submit-field {
+      input {
+        display: inline-block;
+        font-family: 'TeachableSans-Bold';
+        font-size: 14px;
+        padding: 15px 40px;
+        border-radius: 100px;
+        color: white;
+        background-color: #FF7F45;
+      }
+
+      input:hover {
+        background-color: #ff6d2c;
+      }
+    }
+  }
+}
