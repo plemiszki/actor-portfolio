@@ -1,0 +1,23 @@
+#admin-framework {
+  background-color: #F5F6F7;
+  height: 100%;
+
+  #admin-row {
+    height: 100%;
+    margin: 0;
+
+    #admin-sidebar {
+      height: 100%;
+      background-color: white;
+      padding: 36px 32px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    #admin-right-column {
+      height: 100%;
+    }
+  }
+}

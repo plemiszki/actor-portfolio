@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camber Carpenter - Official Website</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <div id="admin-framework">
+      <div id="admin-row" class="row">
+        <div id="admin-sidebar" class="col-xs-2 match-height-layout">
+          <%= button_to "Sign out", sign_out_path, method: :delete %>
+        </div>
+        <div id="admin-right-column" class="col-xs-10 match-height-layout">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
