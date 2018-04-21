@@ -29,7 +29,9 @@ EventsStore.past = function() {
   let events = Object.keys(_events).map(function(id) {
     return(_events[id]);
   });
-  events = HandyTools.filterArrayOfDateStrings(events, 'endDate', { endDate: new Date().setHours(0, 0, 0, 0) })
+  let today = new Date();
+  let yesterday = today.setDate(today.getDate() - 1);
+  events = HandyTools.filterArrayOfDateStrings(events, 'endDate', { endDate: yesterday })
   return HandyTools.sortArrayOfDateStrings(events, 'date').reverse();
 };
 
