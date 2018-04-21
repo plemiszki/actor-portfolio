@@ -21,7 +21,7 @@ EventsStore.upcoming = function() {
   let events = Object.keys(_events).map(function(id) {
     return(_events[id]);
   });
-  events = HandyTools.filterArrayOfDateStrings(events, 'endDate', { startDate: new Date() })
+  events = HandyTools.filterArrayOfDateStrings(events, 'endDate', { startDate: new Date().setHours(0, 0, 0, 0) })
   return HandyTools.sortArrayOfDateStrings(events, 'date');
 };
 
@@ -29,7 +29,7 @@ EventsStore.past = function() {
   let events = Object.keys(_events).map(function(id) {
     return(_events[id]);
   });
-  events = HandyTools.filterArrayOfDateStrings(events, 'endDate', { endDate: new Date() })
+  events = HandyTools.filterArrayOfDateStrings(events, 'endDate', { endDate: new Date().setHours(0, 0, 0, 0) })
   return HandyTools.sortArrayOfDateStrings(events, 'date').reverse();
 };
 

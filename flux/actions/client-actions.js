@@ -8,7 +8,6 @@ const ClientActions = {
       url: '/api/events',
       method: 'GET',
       success: function(response) {
-        console.log(response);
         ServerActions.receiveEvents(response);
       }
     });
