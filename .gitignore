@@ -19,3 +19,10 @@
 # Ignore DS Store Files
 *.DS_Store
 .DS_Store
+
+# Ignore Node Modules
+/node_modules/*
+
+* Ignore bundle.js and bundle.js.map
+/app/assets/javascripts/bundle.js
+/app/assets/javascripts/bundle.js.map

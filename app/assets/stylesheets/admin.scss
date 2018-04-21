@@ -18,6 +18,28 @@
 
     #admin-right-column {
       height: 100%;
+      padding: 40px;
     }
   }
+}
+
+.component {
+
+  h1 {
+    font-size: 20px;
+    color: #2C2F33;
+    letter-spacing: 1.08px;
+    margin-bottom: 28px;
+  }
+}
+
+.white-box {
+  background: #FFFFFF;
+  padding: 36px 32px;
+  border-radius: 6px;
+  box-shadow: 1px 2px 3px 0px #E6E9EC;
+  position: relative;
+  color: #5F5F5F;
+
+
 }
