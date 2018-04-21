@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.6'
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 0.15'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'clearance'
+gem 'validates_timeliness', '~> 4.0'
 
 group :development do
   gem 'byebug', platform: :mri

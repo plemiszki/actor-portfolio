@@ -17,7 +17,7 @@ export default class EventsIndex extends React.Component {
 
   componentDidMount() {
     this.eventsListener = EventsStore.addListener(this.getEvents);
-    ClientActions.fetchEventsWithPartialId(window.location.pathname.split("/")[3]);
+    ClientActions.fetchEvents();
   }
 
   componentWillUnmount() {
