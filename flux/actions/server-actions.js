@@ -4,8 +4,17 @@ const ServerActions = {
 
   receiveErrors: function(response) {
     AppDispatcher.dispatch({
-      actionType: "ERRORS_RECEIVED",
+      actionType: 'ERRORS_RECEIVED',
       errors: response.responseJSON
+    });
+  },
+
+  receiveEvents: function(response) {
+    AppDispatcher.dispatch({
+      actionType: 'EVENTS_RECEIVED',
+      events: response.events
     });
   }
 }
+
+module.exports = ServerActions;
