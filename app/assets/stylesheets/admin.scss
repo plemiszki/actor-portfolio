@@ -35,6 +35,41 @@
     letter-spacing: 1.08px;
     margin-bottom: 28px;
   }
+
+  .btn {
+    border: none;
+    padding: 0;
+    white-space: normal;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'TeachableSans-Bold';
+    padding: 15px 40px;
+    border-radius: 100px;
+    min-width: 175px;
+    color: white;
+    background-color: #013ADF;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      background-color: #0431B4;
+    }
+  }
+
+  .delete-button {
+    min-width: 0;
+    float: right;
+    padding: 15px 30px;
+    color: #E9563D;
+    border: solid 0.5px #E9563D;
+    background-color: white;
+
+    &:hover {
+      background-color: #FBDDD8;
+    }
+  }
 }
 
 .white-box {
@@ -45,7 +80,41 @@
   position: relative;
   color: #5F5F5F;
 
+  h2 {
+    font-family: 'TeachableSans-Medium';
+    font-size: 12px;
+    color: #2C2F33;
+    margin-bottom: 15px;
+  }
 
+  input {
+    width: 100%;
+
+    &.error {
+      border-color: red;
+    }
+  }
+
+  .yesFieldError {
+    margin-top: 10px;
+    color: red;
+    margin-bottom: 20px;
+  }
+
+  .noFieldError {
+    margin-bottom: 36px;
+  }
+
+  .yesModalFieldError {
+    margin-top: 10px;
+    color: red;
+    height: 16px;
+    margin-bottom: 20px;
+  }
+
+  .noModalFieldError {
+    margin-bottom: 46px;
+  }
 }
 
 table.admin-table {

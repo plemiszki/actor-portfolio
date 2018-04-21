@@ -27,7 +27,7 @@ export default class EventsIndex extends React.Component {
   }
 
   redirect(id) {
-    window.location.pathname = "events/" + id;
+    window.location.pathname = "admin/events/" + id;
   }
 
   render() {

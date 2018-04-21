@@ -4,4 +4,8 @@ class Admin::EventsController < AdminController
     render 'index.html.erb'
   end
 
+  def show
+    render 'show.html.erb'
+  end
+
 end
