@@ -76,6 +76,13 @@ export default class PageDetails extends DetailsComponent {
               { this.renderFieldError(this.state.errors, ERRORS.title) }
             </div>
           </div>
+          <div className="row">
+            <div className="col-xs-12">
+              <h2>Text</h2>
+              <textarea rows="5" className={ HandyTools.errorClass(this.state.errors, ERRORS.text) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state.event.text || "" } data-entity="event" data-field="text"></textarea>
+              { this.renderFieldError(this.state.errors, ERRORS.text) }
+            </div>
+          </div>
           { this.renderButtons() }
         </div>
         { this.renderModal() }
