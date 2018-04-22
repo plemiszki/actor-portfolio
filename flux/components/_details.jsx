@@ -21,7 +21,7 @@ const ConfirmDeleteModalStyles = {
   }
 };
 
-export default class _Form extends React.Component {
+export default class _Details extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -41,7 +41,6 @@ export default class _Form extends React.Component {
       fetching: false,
       errors: ErrorsStore.all()
     });
-    console.log(ErrorsStore.all());
   }
 
   clickSave() {
@@ -60,9 +59,6 @@ export default class _Form extends React.Component {
 
   closeModal() {
     this.setState({
-      partialModalOpen: false,
-      cloningModalOpen: false,
-      reusableImagesModalOpen: false,
       deleteModalOpen: false
     });
   }

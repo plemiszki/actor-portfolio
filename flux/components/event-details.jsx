@@ -94,4 +94,4 @@ export default class PageDetails extends DetailsComponent {
       </div>
     );
   }
-}
+};

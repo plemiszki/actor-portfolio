@@ -23,6 +23,28 @@ const ClientActions = {
     });
   },
 
+  createEvent: function(event) {
+    $.ajax({
+      url: '/api/events',
+      method: 'POST',
+      data: {
+        event: {
+          date: event.date,
+          end_date: event.endDate,
+          title: event.title,
+          text: event.text
+        }
+      },
+      success: function(response) {
+        console.log(response);
+        ServerActions.receiveEvents(response);
+      },
+      error: function(response) {
+        ServerActions.receiveErrors(response);
+      }
+    });
+  },
+
   fetchEvent: function(id) {
     $.ajax({
       url: '/api/events/' + id,

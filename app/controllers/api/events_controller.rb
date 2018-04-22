@@ -5,6 +5,16 @@ class Api::EventsController < AdminController
     render 'index.json.jbuilder'
   end
 
+  def create
+    @event = Event.new(event_params)
+    if @event.save
+      @events = Event.all
+      render 'index.json.jbuilder'
+    else
+      render json: @event.errors.full_messages, status: 422
+    end
+  end
+
   def show
     @events = Event.where(id: params[:id])
     render 'index.json.jbuilder'

@@ -1,18 +1,24 @@
 import React from 'react';
+import Modal from 'react-modal';
 import HandyTools from 'handy-tools';
 import ClientActions from '../actions/client-actions';
 import EventsStore from '../stores/events-store';
+import IndexComponent from './_index.jsx';
 
-export default class EventsIndex extends React.Component {
+export default class EventsIndex extends IndexComponent {
   constructor(props) {
     super(props);
-    this.state = { events: [], fetching: true };
+    this.state = {
+      fetching: true,
+      events: [],
+      newModalOpen: false
+    };
     this.getEvents = this.getEvents.bind(this);
   }
 
   getEvents() {
     let events = this.props.timeframe == 'upcoming' ? EventsStore.upcoming() : EventsStore.past();
-    this.setState({ events }, () => this.setState({ fetching: false }));
+    this.setState({ events }, () => this.setState({ fetching: false, newModalOpen: false }));
   }
 
   componentDidMount() {
@@ -31,7 +37,15 @@ export default class EventsIndex extends React.Component {
   }
 
   clickNew() {
-    console.log('new');
+    this.setState({
+      newModalOpen: true
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      newModalOpen: false
+    });
   }
 
   render() {
@@ -70,6 +84,7 @@ export default class EventsIndex extends React.Component {
             </tbody>
           </table>
         </div>
+        { this.renderModal('event', { date: HandyTools.stringifyDate(new Date), endDate: HandyTools.stringifyDate(new Date), title: "", text: "" }) }
       </div>
     );
   }

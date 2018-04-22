@@ -16,7 +16,6 @@ ErrorsStore.all = function() {
 ErrorsStore.__onDispatch = function(payload) {
   switch (payload.actionType) {
     case "ERRORS_RECEIVED":
-      console.log('we are here');
       this.setErrors(payload.errors);
       this.__emitChange();
       break;
