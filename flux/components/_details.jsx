@@ -106,4 +106,8 @@ export default class _Form extends React.Component {
     //   </Modal>
     // );
   }
+
+  componentDidUpdate() {
+    // $('.match-height-layout').matchHeight();
+  }
 }

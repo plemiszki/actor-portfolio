@@ -33,6 +33,7 @@ export default class PageDetails extends DetailsComponent {
 
   changeFieldArgs() {
     return {
+      allErrors: ERRORS,
       errorsArray: this.state.errors,
       changesFunction: () => this.checkForChanges()
     }
@@ -88,9 +89,5 @@ export default class PageDetails extends DetailsComponent {
         { this.renderModal() }
       </div>
     );
-  }
-
-  componentDidUpdate() {
-    // $('.match-height-layout').matchHeight();
   }
 }
