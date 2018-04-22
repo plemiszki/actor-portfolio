@@ -50,6 +50,10 @@ export default class PageDetails extends DetailsComponent {
   }
 
   confirmDelete() {
+    this.setState({
+      deleteModalOpen: false,
+      fetching: true
+    });
     ClientActions.deleteAndGoToIndex('events', this.state.event.id);
   }
 
@@ -86,7 +90,7 @@ export default class PageDetails extends DetailsComponent {
           </div>
           { this.renderButtons() }
         </div>
-        { this.renderModal() }
+        { this.renderModal('event') }
       </div>
     );
   }

@@ -13,7 +13,7 @@ const ConfirmDeleteModalStyles = {
     margin: 'auto',
     maxWidth: 500,
     height: 217,
-    border: 'solid 1px #D4604B',
+    border: 'solid 1px #013ADF',
     borderRadius: '6px',
     textAlign: 'center',
     color: '#5F5F5F',
@@ -94,17 +94,26 @@ export default class _Form extends React.Component {
       }
     }
     return(
-      <div className="noModalFieldError"></div>
+      <div className="noFieldError"></div>
     );
   }
 
-  renderModal() {
-    <div>modal</div>
-    // return(
-    //   <Modal isOpen={ this.state.deleteModalOpen } onRequestClose={ this.closeModal.bind(this) } contentLabel="Modal" style={ ConfirmDeleteModalStyles }>
-    //     <ConfirmDelete entityName={ 'page' } skipCheck={ true } closeModal={ this.closeModal.bind(this) } closeAndFetch={ Admin.closeDeleteModalAndFetch.bind(this) } delete={ this.confirmDelete.bind(this) } />
-    //   </Modal>
-    // );
+  renderModal(entity) {
+    return(
+      <Modal isOpen={ this.state.deleteModalOpen } onRequestClose={ this.closeModal.bind(this) } contentLabel="Modal" style={ ConfirmDeleteModalStyles }>
+        <div className="admin-modal">
+          <div className="confirm-delete">
+            <h1>Are you sure you want to permanently delete this { entity }&#63;</h1>
+            <a className="btn" onClick={ this.confirmDelete.bind(this) }>
+              Yes
+            </a>
+            <a className="btn" onClick={ this.closeModal.bind(this) }>
+              No
+            </a>
+          </div>
+        </div>
+      </Modal>
+    );
   }
 
   componentDidUpdate() {

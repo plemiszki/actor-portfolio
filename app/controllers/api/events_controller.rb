@@ -20,6 +20,12 @@ class Api::EventsController < AdminController
     end
   end
 
+  def destroy
+    Event.find(params[:id]).destroy
+    @events = Event.where(id: params[:id])
+    render 'index.json.jbuilder'
+  end
+
   private
 
   def event_params

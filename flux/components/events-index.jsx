@@ -30,10 +30,15 @@ export default class EventsIndex extends React.Component {
     window.location.pathname = "admin/events/" + id;
   }
 
+  clickNew() {
+    console.log('new');
+  }
+
   render() {
     return (
       <div className="component events-index">
         <h1>{ this.props.timeframe == 'upcoming' ? 'Upcoming/Current Events' : 'Past Events' }</h1>
+        { this.renderNewButton() }
         <div className="white-box">
           { HandyTools.renderSpinner(this.state.fetching) }
           { HandyTools.renderGrayedOut(this.state.fetching, -36, -32, 5) }
@@ -67,6 +72,14 @@ export default class EventsIndex extends React.Component {
         </div>
       </div>
     );
+  }
+
+  renderNewButton() {
+    if (this.props.timeframe == 'upcoming') {
+      return(
+        <a className={ "btn float-button" + HandyTools.renderDisabledButtonClass(this.state.fetching) } onClick={ this.clickNew.bind(this) }>Add Event</a>
+      );
+    }
   }
 
   componentDidUpdate() {

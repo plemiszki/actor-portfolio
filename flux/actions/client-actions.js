@@ -3,6 +3,16 @@ import ServerActions from '../actions/server-actions.js';
 
 const ClientActions = {
 
+  deleteAndGoToIndex: function(directory, id) {
+    $.ajax({
+      url: '/api/' + directory + '/' + id,
+      method: 'DELETE',
+      success: function() {
+        window.location.pathname = '/admin/' + directory;
+      }
+    });
+  },
+
   fetchEvents: function() {
     $.ajax({
       url: '/api/events',
