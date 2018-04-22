@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'bundle.js' %>
+    <%= javascript_include_tag 'bundle' %>
+    <%= javascript_include_tag 'images' %>
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
@@ -13,6 +14,9 @@
       <div id="admin-row" class="row">
         <div id="admin-sidebar" class="col-xs-2 match-height-layout">
           <%= button_to "Sign out", sign_out_path, method: :delete %>
+          <ul>
+            <li><a href="/admin/events">Events</a></li>
+          </ul>
         </div>
         <div id="admin-right-column" class="col-xs-10 match-height-layout">
           <%= yield %>

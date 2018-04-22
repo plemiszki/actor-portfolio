@@ -5,6 +5,13 @@ import EventsIndex from './components/events-index';
 import EventDetails from './components/event-details';
 
 $(document).ready(function() {
+
+  $('#admin-sidebar li a').each(function() {
+    if (this.getAttribute("href") == window.location.pathname) {
+      this.classList.add("highlight");
+    };
+  })
+
   ReactModal.setAppElement(document.body);
   if ($('#events-index-upcoming')[0]) {
     ReactDOM.render(<EventsIndex timeframe={ 'upcoming' } />, document.getElementById("events-index-upcoming"));
