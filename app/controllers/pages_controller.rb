@@ -5,7 +5,7 @@ class PagesController < PublicController
   end
 
   def schedule
-    @events = Event.all.order(:time)
+    @events = Event.where("time > ?", DateTime.now.end_of_day).order(:time)
     render 'schedule.html.erb'
   end
 
