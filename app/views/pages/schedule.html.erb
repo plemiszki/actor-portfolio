@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-md-offset-2 col-md-8">
       <p><%= event.date.strftime("%B %-d") %><%= event.date == event.end_date ? '' : " - #{event.end_date.strftime("%B %-d")}" %></p>
       <p><%= event.title %></p>
-      <p><%= event.text %></p>
+      <%= simple_format(event.text) %>
     </div>
   <% end %>
 </div>
