@@ -59,8 +59,7 @@ export default class EventsIndex extends IndexComponent {
           <table className={ "admin-table" }>
             <thead>
               <tr>
-                <th>Start Date</th>
-                <th>End Date</th>
+                <th>Time</th>
                 <th>Title</th>
               </tr>
             </thead>
@@ -70,10 +69,7 @@ export default class EventsIndex extends IndexComponent {
                 return(
                   <tr key={ index } onClick={ this.redirect.bind(this, event.id) }>
                     <td className="indent">
-                      { event.date }
-                    </td>
-                    <td>
-                      { event.endDate }
+                      { event.timeParsed }
                     </td>
                     <td>
                       { event.title }

@@ -65,17 +65,12 @@ export default class PageDetails extends DetailsComponent {
           { HandyTools.renderSpinner(this.state.fetching) }
           { HandyTools.renderGrayedOut(this.state.fetching, -36, -32, 5) }
           <div className="row">
-            <div className="col-xs-2">
-              <h2>Start Date</h2>
-              <input className={ HandyTools.errorClass(this.state.errors, ERRORS.date) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state.event.date || "" } data-entity="event" data-field="date" />
-              { this.renderFieldError(this.state.errors, ERRORS.date) }
+            <div className="col-xs-3">
+              <h2>Date/Time</h2>
+              <input className={ HandyTools.errorClass(this.state.errors, ERRORS.time) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state.event.time || "" } data-entity="event" data-field="time" />
+              { this.renderFieldError(this.state.errors, ERRORS.time) }
             </div>
-            <div className="col-xs-2">
-              <h2>End Date</h2>
-              <input className={ HandyTools.errorClass(this.state.errors, ERRORS.endDate) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state.event.endDate || "" } data-entity="event" data-field="endDate" />
-              { this.renderFieldError(this.state.errors, ERRORS.endDate) }
-            </div>
-            <div className="col-xs-8">
+            <div className="col-xs-9">
               <h2>Title</h2>
               <input className={ HandyTools.errorClass(this.state.errors, ERRORS.title) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state.event.title || "" } data-entity="event" data-field="title" />
               { this.renderFieldError(this.state.errors, ERRORS.title) }

@@ -29,14 +29,12 @@ const ClientActions = {
       method: 'POST',
       data: {
         event: {
-          date: event.date,
-          end_date: event.endDate,
+          time: event.time,
           title: event.title,
           text: event.text
         }
       },
       success: function(response) {
-        console.log(response);
         ServerActions.receiveEvents(response);
       },
       error: function(response) {
@@ -61,9 +59,7 @@ const ClientActions = {
       method: 'PATCH',
       data: {
         event: {
-          id: event.id,
-          date: event.date,
-          end_date: event.endDate,
+          time: event.time,
           title: event.title,
           text: event.text
         }

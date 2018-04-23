@@ -39,7 +39,7 @@ class Api::EventsController < AdminController
   private
 
   def event_params
-    params[:event].permit(:date, :end_date, :title, :text)
+    params[:event].permit(:date, :end_date, :title, :text, :time)
   end
 
 end

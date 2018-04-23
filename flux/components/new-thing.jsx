@@ -56,17 +56,12 @@ export default class NewThing extends DetailsComponent {
     return(
       <div>
         <div className="row">
-          <div className="col-xs-2">
-            <h2>Start Date</h2>
-            <input className={ HandyTools.errorClass(this.state.errors, ERRORS.date) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state[this.props.entity].date || "" } data-entity={ this.props.entity } data-field="date" />
-            { this.renderFieldError(this.state.errors, ERRORS.date) }
+          <div className="col-xs-3">
+            <h2>Date/Time</h2>
+            <input className={ HandyTools.errorClass(this.state.errors, ERRORS.time) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state.event.time || "" } data-entity="event" data-field="time" />
+            { this.renderFieldError(this.state.errors, ERRORS.time) }
           </div>
-          <div className="col-xs-2">
-            <h2>End Date</h2>
-            <input className={ HandyTools.errorClass(this.state.errors, ERRORS.endDate) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state[this.props.entity].endDate || "" } data-entity={ this.props.entity } data-field="endDate" />
-            { this.renderFieldError(this.state.errors, ERRORS.endDate) }
-          </div>
-          <div className="col-xs-8">
+          <div className="col-xs-9">
             <h2>Title</h2>
             <input className={ HandyTools.errorClass(this.state.errors, ERRORS.title) } onChange={ HandyTools.changeField.bind(this, this.changeFieldArgs()) } value={ this.state[this.props.entity].title || "" } data-entity={ this.props.entity } data-field="title" />
             { this.renderFieldError(this.state.errors, ERRORS.title) }

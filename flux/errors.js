@@ -5,6 +5,9 @@ export const ERRORS = {
   title: [
     "Title can't be blank"
   ],
+  time: [
+    "Time is not valid"
+  ],
   date: [
     "Date is not valid"
   ],
