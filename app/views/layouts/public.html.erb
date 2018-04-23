@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camber Carpenter - Official Website</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <div class="container-fluid banner">
+      <div class="hidden-xs hidden-sm col-md-3 first-name">
+        <div class="vertically-align-contents">
+          <div>
+            Camber
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 headshot">
+      </div>
+      <div class="hidden-xs hidden-sm col-md-3 last-name">
+        <div class="vertically-align-contents">
+          <div>
+            Carpenter
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 hidden-md hidden-lg hidden-xl full-name">
+        Camber Carpenter
+      </div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row menu">
+        <div class="col-xs-12">
+          <a href="/">Home</a>
+          <a href="/schedule">Schedule</a>
+          <a href="/Camber Carpenter.pdf" target="_blank">Resume</a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <%= yield %>
+  </body>
+</html>

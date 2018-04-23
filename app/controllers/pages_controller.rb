@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class PagesController < PublicController
 
   def home
     render 'home.html.erb'
