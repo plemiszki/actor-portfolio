@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'clearance'
 gem 'validates_timeliness', '~> 4.0'
+gem 'redcarpet' # - markdown
 
 group :development do
   gem 'byebug', platform: :mri
