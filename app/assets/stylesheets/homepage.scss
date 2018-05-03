@@ -55,6 +55,11 @@ hr:nth-of-type(2) {
   a:not(last-of-type) {
     margin-right: 80px;
   }
+
+  a.highlight {
+    cursor: default;
+    color: #C22222;
+  }
 }
 
 .schedule {
@@ -82,5 +87,21 @@ hr:nth-of-type(2) {
 
   a {
     color: red;
+  }
+}
+
+.gallery {
+  margin-bottom: 100px;
+
+  .image {
+    background-size: contain;
+    background-position: 50%;
+    background-color: #D8D8D8;
+    width: 100%;
+    height: 300px;
+
+    @include breakpoint(xs-sm) {
+      margin-bottom: 40px;
+    }
   }
 }

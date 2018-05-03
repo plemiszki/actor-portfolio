@@ -12,3 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+$(document).ready(function() {
+  $('.menu a').each(function() {
+    if (this.getAttribute("href") == window.location.pathname) {
+      this.classList.add("highlight");
+    };
+  })
+});

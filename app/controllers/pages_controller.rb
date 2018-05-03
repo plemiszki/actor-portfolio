@@ -9,4 +9,9 @@ class PagesController < PublicController
     render 'schedule.html.erb'
   end
 
+  def gallery
+    @images = Image.order(:order)
+    render 'gallery.html.erb'
+  end
+
 end

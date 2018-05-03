@@ -1,0 +1,9 @@
+<div class="container gallery">
+  <div class="row">
+    <% @images.each do |image| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="image" style="background-image: url(<%= "/images/#{image.url}" %>);"></div>
+      </div>
+    <% end %>
+  </div>
+</div>

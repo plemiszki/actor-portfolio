@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get '/schedule' => 'pages#schedule'
+  get '/gallery' => 'pages#gallery'
 
   namespace :admin do
     get '/' => '/admin/events#index'
