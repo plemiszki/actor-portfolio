@@ -1,8 +1,16 @@
+<script>
+    lightbox.option({
+      'resizeDuration': 0,
+      'wrapAround': true,
+      'showImageNumberLabel': false,
+      'fadeDuration': 100
+    });
+</script>
 <div class="container gallery">
   <div class="row">
     <% @images.each do |image| %>
       <div class="col-xs-12 col-md-4">
-        <div class="image" style="background-image: url(<%= "/images/#{image.url}" %>);"></div>
+        <a href="<%= "images/#{image.url}" %>" class="image" style="background-image: url(<%= "/images/#{image.url}" %>);" data-lightbox="set"></a>
       </div>
     <% end %>
   </div>
