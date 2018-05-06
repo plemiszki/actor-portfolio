@@ -101,6 +101,7 @@ hr:nth-of-type(2) {
     background-repeat: no-repeat;
     width: 100%;
     height: 300px;
+    margin-bottom: 30px;
 
     @include breakpoint(xs-sm) {
       margin-bottom: 40px;
