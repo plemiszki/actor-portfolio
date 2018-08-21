@@ -13,7 +13,7 @@ const ConfirmDeleteModalStyles = {
     margin: 'auto',
     maxWidth: 500,
     height: 217,
-    border: 'solid 1px #013ADF',
+    border: 'solid 1px black',
     borderRadius: '6px',
     textAlign: 'center',
     color: '#5F5F5F',
@@ -71,7 +71,7 @@ export default class _Details extends React.Component {
     }
     return(
       <div>
-        <a className={ "btn save-button" + HandyTools.renderDisabledButtonClass(this.state.fetching || !this.state.changesToSave) } onClick={ this.clickSave.bind(this) }>
+        <a className={ "blue-button standard-width btn save-button" + HandyTools.renderDisabledButtonClass(this.state.fetching || !this.state.changesToSave) } onClick={ this.clickSave.bind(this) }>
           { buttonText }
         </a>
         <a className={ "btn delete-button " + HandyTools.renderDisabledButtonClass(this.state.fetching) } onClick={ this.clickDelete.bind(this) }>
@@ -100,10 +100,10 @@ export default class _Details extends React.Component {
         <div className="admin-modal">
           <div className="confirm-delete">
             <h1>Are you sure you want to permanently delete this { entity }&#63;</h1>
-            <a className="btn" onClick={ this.confirmDelete.bind(this) }>
+            <a className="btn red-button" onClick={ this.confirmDelete.bind(this) }>
               Yes
             </a>
-            <a className="btn" onClick={ this.closeModal.bind(this) }>
+            <a className="btn gray-outline-button" onClick={ this.closeModal.bind(this) }>
               No
             </a>
           </div>

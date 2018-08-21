@@ -6,14 +6,13 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'bundle' %>
-    <%= javascript_include_tag 'images' %>
     <meta name="viewport" content="width=device-width">
   </head>
-  <body>
+  <body class="admin">
     <div id="admin-framework">
       <div id="admin-row" class="row">
         <div id="admin-sidebar" class="col-xs-2 match-height-layout">
-          <%= button_to "Sign out", sign_out_path, method: :delete %>
+          <%= button_to "Sign out", sign_out_path, { method: :delete, class: "sidebar-button" } %>
           <ul>
             <li><a href="/admin/events">Events</a></li>
           </ul>

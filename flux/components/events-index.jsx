@@ -88,7 +88,7 @@ export default class EventsIndex extends IndexComponent {
   renderNewButton() {
     if (this.props.timeframe == 'upcoming') {
       return(
-        <a className={ "btn float-button" + HandyTools.renderDisabledButtonClass(this.state.fetching) } onClick={ this.clickNew.bind(this) }>Add Event</a>
+        <a className={ "blue-button float-button" + HandyTools.renderDisabledButtonClass(this.state.fetching) } onClick={ this.clickNew.bind(this) }>Add Event</a>
       );
     }
   }

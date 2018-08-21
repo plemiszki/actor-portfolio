@@ -15,12 +15,19 @@
 
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
- @import 'reset';
- @import 'fonts';
- @import 'mix-ins';
  @import 'lightbox.min';
 
- @import 'general';
- @import 'sign-in';
+ @import 'handy-tools/styles/reset';
+ @import 'handy-tools/styles/fonts';
+ @import 'handy-tools/styles/breakpoints';
+ @import 'handy-tools/styles/general';
+ @import 'handy-tools/styles/admin-layout';
+ @import 'handy-tools/styles/admin-table';
+ @import 'handy-tools/styles/sign-in';
+
  @import 'admin';
  @import 'homepage';
+
+ input:not(input[type='checkbox']) {
+   -webkit-appearance: none;
+ }
