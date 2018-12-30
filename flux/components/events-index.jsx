@@ -32,10 +32,6 @@ export default class EventsIndex extends IndexComponent {
     this.eventsListener.remove();
   }
 
-  redirect(id) {
-    window.location.pathname = "admin/events/" + id;
-  }
-
   clickNew() {
     this.setState({
       newModalOpen: true
@@ -67,12 +63,16 @@ export default class EventsIndex extends IndexComponent {
               <tr><td></td><td></td></tr>
               { this.state.events.map(function(event, index) {
                 return(
-                  <tr key={ index } onClick={ this.redirect.bind(this, event.id) }>
+                  <tr key={ index }>
                     <td className="indent">
-                      { event.timeParsed }
+                      <a href={ `/admin/events/${event.id}` }>
+                        { event.timeParsed }
+                      </a>
                     </td>
                     <td>
-                      { event.title }
+                      <a href={ `/admin/events/${event.id}` }>
+                        { event.title }
+                      </a>
                     </td>
                   </tr>
                 );
@@ -94,6 +94,6 @@ export default class EventsIndex extends IndexComponent {
   }
 
   componentDidUpdate() {
-    // $('.match-height-layout').matchHeight();
+    $('.match-height-layout').matchHeight();
   }
 }

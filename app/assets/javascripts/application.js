@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./jquery.matchHeight.js
 
 $(document).ready(function() {
   $('.menu a').each(function() {
