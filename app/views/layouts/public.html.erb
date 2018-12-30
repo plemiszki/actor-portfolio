@@ -34,7 +34,9 @@
       <div class="row menu">
         <div class="col-xs-12">
           <a href="/">Home</a>
-          <a href="/schedule">Schedule</a>
+	  <% if Event.upcoming.count > 0 %>
+            <a href="/schedule">Schedule</a>
+	  <% end %>
           <a href="/gallery">Gallery</a>
           <a href="/Camber Carpenter.pdf" target="_blank">Resume</a>
         </div>
