@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503212738) do
+ActiveRecord::Schema.define(version: 20190301164522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "episodes", force: :cascade do |t|
+    t.integer "number",   null: false
+    t.string  "title",    null: false
+    t.string  "url",      null: false
+    t.string  "synopsis", null: false
+    t.string  "guest",    null: false
+    t.index ["title"], name: "index_episodes_on_title", unique: true, using: :btree
+    t.index ["url"], name: "index_episodes_on_url", unique: true, using: :btree
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "title",     null: false
