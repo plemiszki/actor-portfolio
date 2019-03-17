@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.6'
+gem 'rails', '~> 5.0.7.2'
 gem 'pg', '~> 0.15'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -10,7 +10,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'clearance'
 gem 'validates_timeliness', '~> 4.0'
-gem 'redcarpet' # - markdown
+gem 'redcarpet'
 
 group :development do
   gem 'byebug', platform: :mri
