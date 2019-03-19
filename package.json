@@ -21,9 +21,9 @@
     "flux": "^3.1.0",
     "handy-tools": "^1.0.12",
     "lodash": "^4.17.4",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-modal": "^1.6.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-modal": "^3.6.1",
     "webpack": "^1.14.0"
   },
   "engines": {
