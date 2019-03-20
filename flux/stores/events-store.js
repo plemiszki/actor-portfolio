@@ -44,4 +44,4 @@ EventsStore.__onDispatch = function(payload) {
   }
 };
 
-module.exports = EventsStore;
+export default EventsStore

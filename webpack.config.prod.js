@@ -1,11 +1,14 @@
 var webpack = require('webpack');
 
 module.exports = {
+  mode: 'production',
   context: __dirname,
   entry: './flux/entry.jsx',
   output: {
-    path: './app/assets/javascripts',
-    filename: 'bundle.js'
+    path: __dirname + '/app/assets/javascripts',
+    filename: 'bundle.js',
+    devtoolModuleFilenameTemplate: '[resourcePath]',
+    devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
   },
   plugins:[
     new webpack.DefinePlugin({
@@ -20,19 +23,18 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015-without-strict']
-        }
+        use: [
+          { loader: 'babel-loader' }
+        ]
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'source-maps',
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
 };

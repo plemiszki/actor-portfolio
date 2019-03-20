@@ -5,29 +5,29 @@
     "type": "git",
     "url": "git://github.com/plemiszki/actor-portfolio.git"
   },
-  "description": "== README",
-  "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "webpack --config webpack.config.prod.js"
+    "heroku-postbuild": "webpack --mode production"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "babel-core": "^6.20.0",
-    "babel-loader": "^6.2.9",
-    "babel-preset-es2015-without-strict": "0.0.4",
-    "babel-preset-react": "^6.16.0",
+    "@babel/core": "7.4.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.5",
+    "change-case": "3.1.0",
+    "handy-tools": "1.26.0",
     "flux": "^3.1.0",
-    "handy-tools": "^1.0.12",
-    "lodash": "^4.17.4",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-modal": "^3.6.1",
-    "webpack": "^1.14.0"
+    "jquery": "3.3.1",
+    "jquery-match-height": "0.7.2",
+    "lodash": "4.17.11",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-modal": "3.8.1",
+    "react-redux": "6.0.1",
+    "redux": "4.0.1",
+    "redux-thunk": "2.3.0",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0"
   },
   "engines": {
-    "node": "4.1.1",
-    "npm": "2.1.x"
+    "node": "10.9.0"
   }
 }

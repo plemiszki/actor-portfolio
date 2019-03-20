@@ -74,4 +74,4 @@ const ClientActions = {
   }
 }
 
-module.exports = ClientActions;
+export default ClientActions;
