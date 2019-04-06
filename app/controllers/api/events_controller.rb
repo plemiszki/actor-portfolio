@@ -35,9 +35,8 @@ class Api::EventsController < AdminController
   end
 
   def destroy
-    Event.find(params[:id]).destroy
-    @events = Event.where(id: params[:id])
-    render 'index.json.jbuilder'
+    @event = Event.find(params[:id]).destroy
+    render json: @event, status: 200
   end
 
   private

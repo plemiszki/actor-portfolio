@@ -16,24 +16,22 @@ class Api::EpisodesController < AdminController
   end
 
   def show
-    @episodes = Episode.where(id: params[:id])
-    render 'index.json.jbuilder'
+    @episode = Episode.find(params[:id])
+    render 'show.json.jbuilder'
   end
 
   def update
     @episode = Episode.find(params[:id])
     if @episode.update(episode_params)
-      @episodes = Episode.where(id: params[:id])
-      render 'index.json.jbuilder'
+      render 'show.json.jbuilder'
     else
       render json: @episode.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    Episode.find(params[:id]).destroy
-    @episodes = Episode.where(id: params[:id])
-    render 'index.json.jbuilder'
+    @episode = Episode.find(params[:id]).destroy
+    render json: @episode, status: 200
   end
 
   private

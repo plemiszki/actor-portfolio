@@ -10,7 +10,6 @@ export default function(state = {}, action) {
       errors: action.errors
     });
   case 'FETCH_ENTITY':
-    console.log(action);
     return Object.assign({}, state, {
       entity: action.entity,
       array1: action.array1,

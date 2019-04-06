@@ -13,5 +13,8 @@ Errors = {
   ],
   endDate: [
     "End date is not valid"
+  ],
+  number: [
+    "Number is not a number"
   ]
 };

@@ -76,6 +76,18 @@ class NewEntity extends React.Component {
             { Details.renderTextBox.bind(this)({ rows: 5, columnWidth: 12, entity: 'event', property: 'text' }) }
           </div>
         ]);
+      case 'episode':
+        return([
+          <div key="1" className="row">
+            { Details.renderField.bind(this)({ columnWidth: 2, entity: 'episode', property: 'number' }) }
+            { Details.renderField.bind(this)({ columnWidth: 3, entity: 'episode', property: 'title' }) }
+            { Details.renderField.bind(this)({ columnWidth: 3, entity: 'episode', property: 'guest', columnHeader: 'Guest Star' }) }
+            { Details.renderField.bind(this)({ columnWidth: 4, entity: 'episode', property: 'url', columnHeader: 'YouTube Url' }) }
+          </div>,
+          <div key="2" className="row">
+            { Details.renderTextBox.bind(this)({ rows: 5, columnWidth: 12, entity: 'episode', property: 'synopsis' }) }
+          </div>
+        ]);
     }
   }
 }

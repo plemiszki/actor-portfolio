@@ -5,6 +5,7 @@ class Admin::EpisodesController < AdminController
   end
 
   def show
+    @episode = Episode.find_by_id(params[:id])
     render 'show.html.erb'
   end
 

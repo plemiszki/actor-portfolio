@@ -50,4 +50,49 @@ $(document).ready(() => {
       document.querySelector('#event-details')
     );
   }
+
+  if (document.querySelector('#episodes-index')) {
+    ReactDOM.render(
+      <Provider context={ MyContext } store={ store }>
+        <StandardIndex
+          context={ MyContext }
+          entityName='episode'
+          columns={ ['number', 'title', 'guest'] }
+          columnHeaders={ ['', '', 'Guest Star'] }
+          columnWidths={ [200] }
+          modalDimensions={ { height: 432, width: 1000 } }
+        >
+          <NewEntity
+            context={ MyContext }
+            initialEntity={ { number: '', title: '', url: '', synopsis: '', guest: '' } }
+          />
+        </StandardIndex>
+      </Provider>,
+      document.querySelector('#episodes-index')
+    );
+  }
+
+  if (document.querySelector('#episode-details')) {
+    ReactDOM.render(
+      <Provider context={ MyContext } store={ store }>
+        <SimpleDetails
+          context={ MyContext }
+          entityName='episode'
+          initialEntity={ { number: '', title: '', url: '', synopsis: '', guest: '' } }
+          fields={ [
+            [
+              { columnWidth: 2, entity: 'episode', property: 'number' },
+              { columnWidth: 3, entity: 'episode', property: 'title' },
+              { columnWidth: 3, entity: 'episode', property: 'guest', columnHeader: 'Guest Star' },
+              { columnWidth: 4, entity: 'episode', property: 'url', columnHeader: 'YouTube ID' }
+            ],
+            [
+              { columnWidth: 12, entity: 'episode', property: 'synopsis', type: 'textbox', rows: 5 }
+            ]
+          ] }
+        />
+      </Provider>,
+      document.querySelector('#episode-details')
+    );
+  }
 });
