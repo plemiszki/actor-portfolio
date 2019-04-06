@@ -16,7 +16,7 @@
 //= require errors
 
 $(document).ready(function() {
-  $('#admin-sidebar ul a').each(function() {
+  $('.menu a, #admin-sidebar ul a').each(function() {
     if (this.getAttribute("href") == window.location.pathname) {
       this.classList.add("highlight");
     };
