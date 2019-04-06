@@ -13,9 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require ./jquery.matchHeight.js
+//= require errors
 
 $(document).ready(function() {
-  $('.menu a').each(function() {
+  $('#admin-sidebar ul a').each(function() {
     if (this.getAttribute("href") == window.location.pathname) {
       this.classList.add("highlight");
     };

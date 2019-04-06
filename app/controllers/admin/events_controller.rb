@@ -5,6 +5,7 @@ class Admin::EventsController < AdminController
   end
 
   def show
+    @event = Event.find_by_id(params[:id])
     render 'show.html.erb'
   end
 

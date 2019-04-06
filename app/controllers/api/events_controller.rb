@@ -1,14 +1,19 @@
 class Api::EventsController < AdminController
 
   def index
-    @events = Event.all
+    @events = Event.upcoming
+    render 'index.json.jbuilder'
+  end
+
+  def index_past
+    @events = Event.past
     render 'index.json.jbuilder'
   end
 
   def create
     @event = Event.new(event_params)
     if @event.save
-      @events = Event.all
+      @events = Event.upcoming
       render 'index.json.jbuilder'
     else
       render json: @event.errors.full_messages, status: 422
@@ -16,15 +21,14 @@ class Api::EventsController < AdminController
   end
 
   def show
-    @events = Event.where(id: params[:id])
-    render 'index.json.jbuilder'
+    @event = Event.find(params[:id])
+    render 'show.json.jbuilder'
   end
 
   def update
     @event = Event.find(params[:id])
     if @event.update(event_params)
-      @events = Event.where(id: params[:id])
-      render 'index.json.jbuilder'
+      render 'show.json.jbuilder'
     else
       render json: @event.errors.full_messages, status: 422
     end

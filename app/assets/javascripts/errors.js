@@ -1,4 +1,4 @@
-export const ERRORS = {
+Errors = {
   text: [
     "Text can't be blank"
   ],

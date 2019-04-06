@@ -1,6 +1,5 @@
 {
   "name": "actor-portfolio",
-  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/plemiszki/actor-portfolio.git"
@@ -12,9 +11,8 @@
     "@babel/core": "7.4.0",
     "@babel/preset-react": "7.0.0",
     "babel-loader": "8.0.5",
-    "change-case": "3.1.0",
-    "handy-tools": "1.26.0",
-    "flux": "^3.1.0",
+    "handy-components": "1.7.0",
+    "handy-tools": "2.0.2",
     "jquery": "3.3.1",
     "jquery-match-height": "0.7.2",
     "lodash": "4.17.11",

@@ -13,21 +13,24 @@
  *= require_self
  */
 
- @import 'bootstrap-sprockets';
- @import 'bootstrap';
- @import 'lightbox.min';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'lightbox.min';
 
- @import 'handy-tools/styles/reset';
- @import 'handy-tools/styles/fonts';
- @import 'handy-tools/styles/breakpoints';
- @import 'handy-tools/styles/general';
- @import 'handy-tools/styles/admin-layout';
- @import 'handy-tools/styles/admin-table';
- @import 'handy-tools/styles/sign-in';
+@import 'handy-tools/styles/reset';
+@import 'handy-tools/styles/breakpoints';
+@import 'handy-tools/styles/fonts';
+@import 'handy-tools/styles/general';
+@import 'handy-tools/styles/buttons';
+@import 'handy-tools/styles/sign-in';
 
- @import 'admin';
- @import 'homepage';
+@import 'handy-components/styles/admin-layout';
+@import 'handy-components/styles/admin-table';
+@import 'handy-components/styles/modal-select';
 
- input:not(input[type='checkbox']) {
-   -webkit-appearance: none;
- }
+@import 'admin';
+@import 'homepage';
+
+input:not(input[type='checkbox']) {
+  -webkit-appearance: none;
+}
