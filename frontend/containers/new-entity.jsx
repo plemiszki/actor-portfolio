@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Modal from 'react-modal'
+import ChangeCase from 'change-case'
 import { Common, Details } from 'handy-components'
 import HandyTools from 'handy-tools'
 import { createEntity } from '../actions/index'
@@ -58,7 +59,7 @@ class NewEntity extends React.Component {
           { Common.renderSpinner(this.state.fetching) }
           { Common.renderGrayedOut(this.state.fetching, -36, -32, 5) }
           { this.renderFields() }
-          <input type="submit" className={ "btn" + Common.renderDisabledButtonClass(this.state.fetching) } value={ this.props.buttonText || `Add ${HandyTools.capitalize(this.props.entityName)}` } onClick={ this.clickAdd.bind(this) } />
+          <input type="submit" className={ "btn" + Common.renderDisabledButtonClass(this.state.fetching) } value={ this.props.buttonText || `Add ${HandyTools.capitalize(ChangeCase.titleCase(this.props.entityName))}` } onClick={ this.clickAdd.bind(this) } />
         </form>
       </div>
     );
@@ -74,6 +75,16 @@ class NewEntity extends React.Component {
           </div>,
           <div key="2" className="row">
             { Details.renderTextBox.bind(this)({ rows: 5, columnWidth: 12, entity: 'event', property: 'text' }) }
+          </div>
+        ]);
+      case 'newsItem':
+        return([
+          <div key="1" className="row">
+            { Details.renderField.bind(this)({ columnWidth: 2, entity: 'newsItem', property: 'date' }) }
+            { Details.renderField.bind(this)({ columnWidth: 10, entity: 'newsItem', property: 'header' }) }
+          </div>,
+          <div key="2" className="row">
+            { Details.renderTextBox.bind(this)({ rows: 5, columnWidth: 12, entity: 'newsItem', property: 'text' }) }
           </div>
         ]);
       case 'episode':

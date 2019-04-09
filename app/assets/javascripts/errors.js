@@ -16,5 +16,8 @@ Errors = {
   ],
   number: [
     "Number is not a number"
+  ],
+  header: [
+    "Header can't be blank"
   ]
 };

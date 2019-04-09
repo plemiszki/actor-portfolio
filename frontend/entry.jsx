@@ -51,6 +51,48 @@ $(document).ready(() => {
     );
   }
 
+  if (document.querySelector('#news-items-index')) {
+    ReactDOM.render(
+      <Provider context={ MyContext } store={ store }>
+        <StandardIndex
+          context={ MyContext }
+          entityName='newsItem'
+          header={ 'News' }
+          columns={ ['date', 'header'] }
+          modalDimensions={ { height: 432, width: 1000 } }
+        >
+          <NewEntity
+            context={ MyContext }
+            initialEntity={ { header: '', text: '', date: '' } }
+          />
+        </StandardIndex>
+      </Provider>,
+      document.querySelector('#news-items-index')
+    );
+  }
+
+  if (document.querySelector('#news-item-details')) {
+    ReactDOM.render(
+      <Provider context={ MyContext } store={ store }>
+        <SimpleDetails
+          context={ MyContext }
+          entityName='newsItem'
+          initialEntity={ { date: '', header: '', text: '' } }
+          fields={ [
+            [
+              { columnWidth: 2, entity: 'newsItem', property: 'date' },
+              { columnWidth: 10, entity: 'newsItem', property: 'header' },
+            ],
+            [
+              { columnWidth: 12, entity: 'newsItem', property: 'text', type: 'textbox', rows: 5 }
+            ]
+          ] }
+        />
+      </Provider>,
+      document.querySelector('#news-item-details')
+    );
+  }
+
   if (document.querySelector('#episodes-index')) {
     ReactDOM.render(
       <Provider context={ MyContext } store={ store }>
