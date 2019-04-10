@@ -6,5 +6,15 @@
         <p>In May 2018, she graduated from the Neighborhood Playhouse School of the Theatre and now auditions professionally.</p>
       </div>
     </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 news">
+        <h1>Latest News</h1>
+        <% @news_items.each do |news_item| %>
+          <div class="date"><%= news_item.date.strftime("%-m/%-d/%y") %></div>
+          <h2><%= news_item.header %></h2>
+          <%= markdown(news_item.text) %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

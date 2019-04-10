@@ -1,6 +1,7 @@
 class PagesController < PublicController
 
   def home
+    @news_items = NewsItem.all.order(date: :desc).limit(5)
     render 'home.html.erb'
   end
 
