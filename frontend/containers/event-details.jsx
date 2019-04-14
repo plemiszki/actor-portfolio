@@ -22,7 +22,7 @@ class EventDetails extends React.Component {
     this.props.fetchEntity({
       id: window.location.pathname.split('/')[3],
       directory: window.location.pathname.split('/')[2],
-      entityName: this.props.entityName
+      entityName: 'event'
     }).then(() => {
       this.setState({
         fetching: false,
@@ -74,14 +74,6 @@ class EventDetails extends React.Component {
       });
     });
   }
-
-  // confirmDelete() {
-  //   this.setState({
-  //     deleteModalOpen: false,
-  //     fetching: true
-  //   });
-  //   ClientActions.deleteAndGoToIndex('events', this.state.event.id);
-  // }
 
   render() {
     return(

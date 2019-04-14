@@ -43,7 +43,7 @@ export function fetchEntity(args) {
     }).then(
       (response) => dispatch({
         type: `FETCH_ENTITY`,
-        entity: response[args.arrayName],
+        entity: response[args.entityName],
         array1: response.array1,
         array2: response.array2,
         array3: response.array3
@@ -63,7 +63,7 @@ export function updateEntity(args) {
     }).then(
       (response) => dispatch({
         type: 'UPDATE_ENTITY',
-        entity: response[args.arrayName]
+        entity: response[args.entityName]
       }),
       (response) => dispatch({
         type: 'ERRORS',
