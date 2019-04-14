@@ -6,7 +6,7 @@ let TabActions = {
         tab: 'completed',
         fetching: true
       }, () => {
-        this.props.fetchEntities('events_past').then(() => {
+        this.props.fetchEntities('events_past', 'events').then(() => {
           this.setState({
             fetching: false,
             entitiesCompleted: this.props.entities

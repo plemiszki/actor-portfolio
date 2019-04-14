@@ -1,4 +1,4 @@
-json.entity do
+json.newsItem do
   json.id @news_item.id
   json.date @news_item.date.strftime("%-m/%-d/%y")
   json.header @news_item.header

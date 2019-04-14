@@ -10,9 +10,11 @@
       <div class="col-xs-12 col-md-8 col-md-offset-2 news">
         <h1>Latest News</h1>
         <% @news_items.each do |news_item| %>
-          <div class="date"><%= news_item.date.strftime("%-m/%-d/%y") %></div>
-          <h2><%= news_item.header %></h2>
-          <%= markdown(news_item.text) %>
+          <div class="news-item">
+            <div class="date"><%= news_item.date.strftime("%-m/%-d/%y") %></div>
+            <h2><%= news_item.header %></h2>
+            <%= markdown(news_item.text) %>
+          </div>
         <% end %>
       </div>
     </div>

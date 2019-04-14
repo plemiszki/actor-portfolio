@@ -30,7 +30,8 @@ class NewEntity extends React.Component {
     this.props.createEntity({
       directory: HandyTools.convertToUnderscore(this.props.entityNamePlural),
       entityName: this.props.entityName,
-      entity: this.state[this.props.entityName]
+      entity: this.state[this.props.entityName],
+      arrayName: this.props.entityNamePlural
     }).then(() => {
       this.setState({
         fetching: false,
