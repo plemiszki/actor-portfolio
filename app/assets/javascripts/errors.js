@@ -6,7 +6,8 @@ Errors = {
     "Title can't be blank"
   ],
   time: [
-    "Time is not valid"
+    "Time is not valid",
+    "Time has already been taken"
   ],
   date: [
     "Date is not valid"

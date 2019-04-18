@@ -27,17 +27,21 @@ class NewEntity extends React.Component {
     this.setState({
       fetching: true
     });
+    let entityNamePlural = this.props.entityNamePlural || `${this.props.entityName}s`;
+    let directory = HandyTools.convertToUnderscore(entityNamePlural);
     this.props.createEntity({
-      directory: HandyTools.convertToUnderscore(this.props.entityNamePlural),
+      directory,
       entityName: this.props.entityName,
       entity: this.state[this.props.entityName],
       arrayName: this.props.entityNamePlural
     }).then(() => {
-      this.setState({
-        fetching: false,
-        [this.props.entityName]: HandyTools.deepCopy(this.props.initialEntity)
-      });
-      this.props.callback(this.props.entities);
+      if (this.props.redirect) {
+        window.location.pathname = `/admin/${directory}/${this.props.entity.id}`;
+      } else if (this.props.redirectToIndex) {
+        window.location.pathname = `/admin/${directory}`;
+      } else {
+        this.props.callback(this.props.entities);
+      }
     }, () => {
       this.setState({
         fetching: false,

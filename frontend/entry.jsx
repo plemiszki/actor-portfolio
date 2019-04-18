@@ -43,9 +43,27 @@ $(document).ready(() => {
   if (document.querySelector('#event-details')) {
     ReactDOM.render(
       <Provider context={ MyContext } store={ store }>
-        <EventDetails
+        <SimpleDetails
           context={ MyContext }
-        />
+          entityName='event'
+          initialEntity={ { time: '', title: '', text: '' } }
+          fields={ [
+            [
+              { columnWidth: 3, entity: 'event', property: 'time' },
+              { columnWidth: 9, entity: 'event', property: 'title' },
+            ],
+            [
+              { columnWidth: 12, entity: 'event', property: 'text', type: 'textbox', rows: 10 }
+            ]
+          ] }
+          copy={ true }
+          modalDimensions={ { height: 432, width: 1000 } }
+        >
+          <NewEntity
+            context={ MyContext }
+            redirectToIndex={ true }
+          />
+        </SimpleDetails>
       </Provider>,
       document.querySelector('#event-details')
     );
