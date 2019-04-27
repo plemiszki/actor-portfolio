@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import ReactModal from 'react-modal';
 import { SimpleDetails, StandardIndex, TabbedIndex } from 'handy-components';
-
-import EventDetails from './containers/event-details';
 import NewEntity from './containers/new-entity';
-
 import TabActions from './containers/modules/tab-actions.js';
 
 import configureStore from './store/store';

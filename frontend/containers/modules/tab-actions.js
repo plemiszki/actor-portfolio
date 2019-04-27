@@ -9,7 +9,7 @@ let TabActions = {
         this.props.fetchEntities('events_past', 'events').then(() => {
           this.setState({
             fetching: false,
-            entitiesCompleted: this.props.entities
+            entitiesCompleted: this.props.events
           });
         });
       });

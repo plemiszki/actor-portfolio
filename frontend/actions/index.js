@@ -6,10 +6,10 @@ export function fetchEntities(directory, arrayName) {
       method: 'GET',
       url: `/api/${directory}`
     }).then(
-      (response) => dispatch({
-        type: 'FETCH_ENTITIES',
-        entities: response[arrayName]
-      })
+      (response) => {
+        let obj = Object.assign(response, { type: 'FETCH_ENTITIES' });
+        dispatch(obj);
+      }
     );
   }
 }

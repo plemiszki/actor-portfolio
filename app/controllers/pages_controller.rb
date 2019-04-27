@@ -15,4 +15,9 @@ class PagesController < PublicController
     render 'gallery.html.erb'
   end
 
+  def onwords
+    @episodes = Episode.order(:number)
+    render 'onwords.html.erb', layout: 'application'
+  end
+
 end
