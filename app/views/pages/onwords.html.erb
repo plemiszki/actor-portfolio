@@ -5,11 +5,20 @@
       <h2 class="text-center">Increase your vocabulary one joke at a time.</h2>
     </div>
   </div>
-  <div class="row">
+  <div class="row videos">
     <% @episodes.each do |episode| %>
-      <div class="col-xs-12 col-md-4">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= episode.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="col-xs-12 col-md-6">
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= episode.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="title"><%= "Episode #{episode.number} - #{episode.title}" %></p>
+        <p class="synopsis"><%= episode.synopsis %></p>
       </div>
     <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <a class="more" href="/" target="_blank">Learn more about Camber</a>
+    </div>
   </div>
 </div>
