@@ -6,6 +6,15 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'lightbox' %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139189149-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-139189149-1');
+      </script>
+    <!-- End of Google Analytics -->
   </head>
   <body>
     <div class="container-fluid banner">
@@ -34,9 +43,9 @@
       <div class="row menu">
         <div class="col-xs-12">
           <a href="/">Home</a>
-	  <% if Event.upcoming.count > 0 %>
+	        <% if Event.upcoming.count > 0 %>
             <a href="/schedule">Schedule</a>
-	  <% end %>
+	        <% end %>
           <a href="/gallery">Gallery</a>
           <a href="/Camber Carpenter.pdf" target="_blank">Resume</a>
           <a target="_blank" href="/onwords">Video</a>
